@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <title>Assist</title>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    </head>
+    <body>
+        <!DOCTYPE html>
+        <!-- Created By CodingLab - www.codinglabweb.com -->
+        <html lang="en" dir="ltr">
+          <head>
+            <meta charset="UTF-8">
+            <!---<title> Responsive Registration Form | CodingLab </title>--->
+            <link rel="stylesheet" href="static\css\style.css">
+             <meta name="viewport" content="width=device-width, initial-scale=1.0">
+           </head>
+        <body>
+          <div class="container">
+            <div class="title">Prediction System</div>
+            <div class="content">
+              <form action="{{url_for('home')}}" method="POST">
+                <div class="user-details">
+                  <div class="input-box">
+                    <span class="details">Full Name</span>
+                    <input type="text" placeholder="Enter your name" required>
+                  </div>
+                  <div class="input-box">
+                    <span class="details">age</span>
+                    <input type="text" placeholder="Enter your age" required>
+                  </div>
+                  <div class="input-box">
+                    <label for="symptom1">Choose </label>
+                    <select id="symptom1" name="a">
+                      <option value="1">receiving_blood_transfusion</option>
+                      <option value="2">red_sore_around_nose</option>
+                      <option value="3">abnormal_menstruation</option>
+                      <option value="4">continuous_sneezing</option>
+                      <option value="5">breathlessness</option>
+                      <option value="6">blackheads</option>
+                      <option value="7">shivering</option>
+                      <option value="8">dizziness</option>
+                      <option value="9">back_pain</option>
+                      <option value="10">unsteadiness</option>
+                      <option value="11">yellow_crust_ooze</option>
+                      <option value="12">muscle_weakness</option>
+                      <option value="13">loss_of_balance</option>
+                      <option value="14">chills</option>
+                      <option value="15">ulcers_on_tongue</option>
+                      <option value="16">stomach_bleeding</option>
+                      <option value="17">lack_of_concentration</option>
+                      <option value="18">coma</option>
+                      <option value="19">neck_pain</option>
+                      <option value="20">weakness_of_one_body_side</option>
+                      <option value="21">diarrhoea</option>
+                      <option value="22">receiving_unsterile_injections</option>
+                      <option value="22">headache</option>
+                      <option value="23">family_history</option>
+                      <option value="24">fast_heart_rate</option>
+                      <option value="25">pain_behind_the_eyes</option>
+                      <option value="26">sweating</option>
+                      <option value="27">mucoid_sputum</option>
+                      <option value="28">spotting_ urination</option>
+                      <option value="29">sunken_eyes</option>
+                      <option value="30">dischromic _patches</option>
+                      <option value="31">nausea</option>
+                      <option value="32">dehydration</option>
+                      <option value="33">loss_of_appetite</option>
+                      <option value="34">abdominal_pain</option>
+                      <option value="35">stomach_pain</option>
+                      <option value="36">yellowish_skin</option>
+                      <option value="37">altered_sensorium</option>
+                      <option value="38">chest_pain</option>
+                      <option value="39">muscle_wasting</option>
+                      <option value="40">vomiting</option>
+                      <option value="41">mild_fever</option>
+                      <option value="42">high_fever</option>
+                      <option value="43">red_spots_over_body</option>
+                      <option value="44">dark_urine</option>
+                      <option value="45">itching</option>
+                      <option value="46">yellowing_of_eyes</option>
+                      <option value="47">fatigue</option>
+                      <option value="48">joint_pain</option>
+                      <option value="49">muscle_pain</option>
+                    </select>
+                  </div>
+                  <div class="input-box">
+                    <label for="symptom1">Choose </label>
+                    <select id="symptom2" name="b">
+                      <option value="1">receiving_blood_transfusion</option>
+                      <option value="2">red_sore_around_nose</option>
+                      <option value="3">abnormal_menstruation</option>
+                      <option value="4">continuous_sneezing</option>
+                      <option value="5">breathlessness</option>
+                      <option value="6">blackheads</option>
+                      <option value="7">shivering</option>
+                      <option value="8">dizziness</option>
+                      <option value="9">back_pain</option>
+                      <option value="10">unsteadiness</option>
+                      <option value="11">yellow_crust_ooze</option>
+                      <option value="12">muscle_weakness</option>
+                      <option value="13">loss_of_balance</option>
+                      <option value="14">chills</option>
+                      <option value="15">ulcers_on_tongue</option>
+                      <option value="16">stomach_bleeding</option>
+                      <option value="17">lack_of_concentration</option>
+                      <option value="18">coma</option>
+                      <option value="19">neck_pain</option>
+                      <option value="20">weakness_of_one_body_side</option>
+                      <option value="21">diarrhoea</option>
+                      <option value="22">receiving_unsterile_injections</option>
+                      <option value="22">headache</option>
+                      <option value="23">family_history</option>
+                      <option value="24">fast_heart_rate</option>
+                      <option value="25">pain_behind_the_eyes</option>
+                      <option value="26">sweating</option>
+                      <option value="27">mucoid_sputum</option>
+                      <option value="28">spotting_ urination</option>
+                      <option value="29">sunken_eyes</option>
+                      <option value="30">dischromic _patches</option>
+                      <option value="31">nausea</option>
+                      <option value="32">dehydration</option>
+                      <option value="33">loss_of_appetite</option>
+                      <option value="34">abdominal_pain</option>
+                      <option value="35">stomach_pain</option>
+                      <option value="36">yellowish_skin</option>
+                      <option value="37">altered_sensorium</option>
+                      <option value="38">chest_pain</option>
+                      <option value="39">muscle_wasting</option>
+                      <option value="40">vomiting</option>
+                      <option value="41">mild_fever</option>
+                      <option value="42">high_fever</option>
+                      <option value="43">red_spots_over_body</option>
+                      <option value="44">dark_urine</option>
+                      <option value="45">itching</option>
+                      <option value="46">yellowing_of_eyes</option>
+                      <option value="47">fatigue</option>
+                      <option value="48">joint_pain</option>
+                      <option value="49">muscle_pain</option>
+                    </select>
+                  </div>
+                  <div class="input-box">
+                    <label for="symptom3">Choose </label>
+                    <select id="symptom3" name="c">
+                      <option value="1">receiving_blood_transfusion</option>
+                      <option value="2">red_sore_around_nose</option>
+                      <option value="3">abnormal_menstruation</option>
+                      <option value="4">continuous_sneezing</option>
+                      <option value="5">breathlessness</option>
+                      <option value="6">blackheads</option>
+                      <option value="7">shivering</option>
+                      <option value="8">dizziness</option>
+                      <option value="9">back_pain</option>
+                      <option value="10">unsteadiness</option>
+                      <option value="11">yellow_crust_ooze</option>
+                      <option value="12">muscle_weakness</option>
+                      <option value="13">loss_of_balance</option>
+                      <option value="14">chills</option>
+                      <option value="15">ulcers_on_tongue</option>
+                      <option value="16">stomach_bleeding</option>
+                      <option value="17">lack_of_concentration</option>
+                      <option value="18">coma</option>
+                      <option value="19">neck_pain</option>
+                      <option value="20">weakness_of_one_body_side</option>
+                      <option value="21">diarrhoea</option>
+                      <option value="22">receiving_unsterile_injections</option>
+                      <option value="22">headache</option>
+                      <option value="23">family_history</option>
+                      <option value="24">fast_heart_rate</option>
+                      <option value="25">pain_behind_the_eyes</option>
+                      <option value="26">sweating</option>
+                      <option value="27">mucoid_sputum</option>
+                      <option value="28">spotting_ urination</option>
+                      <option value="29">sunken_eyes</option>
+                      <option value="30">dischromic _patches</option>
+                      <option value="31">nausea</option>
+                      <option value="32">dehydration</option>
+                      <option value="33">loss_of_appetite</option>
+                      <option value="34">abdominal_pain</option>
+                      <option value="35">stomach_pain</option>
+                      <option value="36">yellowish_skin</option>
+                      <option value="37">altered_sensorium</option>
+                      <option value="38">chest_pain</option>
+                      <option value="39">muscle_wasting</option>
+                      <option value="40">vomiting</option>
+                      <option value="41">mild_fever</option>
+                      <option value="42">high_fever</option>
+                      <option value="43">red_spots_over_body</option>
+                      <option value="44">dark_urine</option>
+                      <option value="45">itching</option>
+                      <option value="46">yellowing_of_eyes</option>
+                      <option value="47">fatigue</option>
+                      <option value="48">joint_pain</option>
+                      <option value="49">muscle_pain</option>
+                    </select>
+                  </div>
+                  <div class="input-box">
+                    <label for="symptom4">Choose </label>
+
+                    <select id="symptom4" name="d">
+                      <option value="1">receiving_blood_transfusion</option>
+                      <option value="2">red_sore_around_nose</option>
+                      <option value="3">abnormal_menstruation</option>
+                      <option value="4">continuous_sneezing</option>
+                      <option value="5">breathlessness</option>
+                      <option value="6">blackheads</option>
+                      <option value="7">shivering</option>
+                      <option value="8">dizziness</option>
+                      <option value="9">back_pain</option>
+                      <option value="10">unsteadiness</option>
+                      <option value="11">yellow_crust_ooze</option>
+                      <option value="12">muscle_weakness</option>
+                      <option value="13">loss_of_balance</option>
+                      <option value="14">chills</option>
+                      <option value="15">ulcers_on_tongue</option>
+                      <option value="16">stomach_bleeding</option>
+                      <option value="17">lack_of_concentration</option>
+                      <option value="18">coma</option>
+                      <option value="19">neck_pain</option>
+                      <option value="20">weakness_of_one_body_side</option>
+                      <option value="21">diarrhoea</option>
+                      <option value="22">receiving_unsterile_injections</option>
+                      <option value="22">headache</option>
+                      <option value="23">family_history</option>
+                      <option value="24">fast_heart_rate</option>
+                      <option value="25">pain_behind_the_eyes</option>
+                      <option value="26">sweating</option>
+                      <option value="27">mucoid_sputum</option>
+                      <option value="28">spotting_ urination</option>
+                      <option value="29">sunken_eyes</option>
+                      <option value="30">dischromic _patches</option>
+                      <option value="31">nausea</option>
+                      <option value="32">dehydration</option>
+                      <option value="33">loss_of_appetite</option>
+                      <option value="34">abdominal_pain</option>
+                      <option value="35">stomach_pain</option>
+                      <option value="36">yellowish_skin</option>
+                      <option value="37">altered_sensorium</option>
+                      <option value="38">chest_pain</option>
+                      <option value="39">muscle_wasting</option>
+                      <option value="40">vomiting</option>
+                      <option value="41">mild_fever</option>
+                      <option value="42">high_fever</option>
+                      <option value="43">red_spots_over_body</option>
+                      <option value="44">dark_urine</option>
+                      <option value="45">itching</option>
+                      <option value="46">yellowing_of_eyes</option>
+                      <option value="47">fatigue</option>
+                      <option value="48">joint_pain</option>
+                      <option value="49">muscle_pain</option>
+                    </select>
+                  </div>
+                  <div class="input-box">
+                    <label for="symptom5">Choose </label>
+
+                    <select id="symptom5" name="e">
+                      <option value="1">receiving_blood_transfusion</option>
+                      <option value="2">red_sore_around_nose</option>
+                      <option value="3">abnormal_menstruation</option>
+                      <option value="4">continuous_sneezing</option>
+                      <option value="5">breathlessness</option>
+                      <option value="6">blackheads</option>
+                      <option value="7">shivering</option>
+                      <option value="8">dizziness</option>
+                      <option value="9">back_pain</option>
+                      <option value="10">unsteadiness</option>
+                      <option value="11">yellow_crust_ooze</option>
+                      <option value="12">muscle_weakness</option>
+                      <option value="13">loss_of_balance</option>
+                      <option value="14">chills</option>
+                      <option value="15">ulcers_on_tongue</option>
+                      <option value="16">stomach_bleeding</option>
+                      <option value="17">lack_of_concentration</option>
+                      <option value="18">coma</option>
+                      <option value="19">neck_pain</option>
+                      <option value="20">weakness_of_one_body_side</option>
+                      <option value="21">diarrhoea</option>
+                      <option value="22">receiving_unsterile_injections</option>
+                      <option value="22">headache</option>
+                      <option value="23">family_history</option>
+                      <option value="24">fast_heart_rate</option>
+                      <option value="25">pain_behind_the_eyes</option>
+                      <option value="26">sweating</option>
+                      <option value="27">mucoid_sputum</option>
+                      <option value="28">spotting_ urination</option>
+                      <option value="29">sunken_eyes</option>
+                      <option value="30">dischromic _patches</option>
+                      <option value="31">nausea</option>
+                      <option value="32">dehydration</option>
+                      <option value="33">loss_of_appetite</option>
+                      <option value="34">abdominal_pain</option>
+                      <option value="35">stomach_pain</option>
+                      <option value="36">yellowish_skin</option>
+                      <option value="37">altered_sensorium</option>
+                      <option value="38">chest_pain</option>
+                      <option value="39">muscle_wasting</option>
+                      <option value="40">vomiting</option>
+                      <option value="41">mild_fever</option>
+                      <option value="42">high_fever</option>
+                      <option value="43">red_spots_over_body</option>
+                      <option value="44">dark_urine</option>
+                      <option value="45">itching</option>
+                      <option value="46">yellowing_of_eyes</option>
+                      <option value="47">fatigue</option>
+                      <option value="48">joint_pain</option>
+                      <option value="49">muscle_pain</option>
+                    </select>
+                 
+                <div class="gender-details">
+                  <input type="radio" name="gender" id="dot-1">
+                  <input type="radio" name="gender" id="dot-2">
+                  <input type="radio" name="gender" id="dot-3">
+                  <br><br>
+                  <span class="gender-title">Gender</span>
+                  <div class="category">
+                    <label for="dot-1">
+                    <span class="dot one"></span>
+                    <span class="gender">Male</span>
+                  </label>
+                  
+                  <label for="dot-2">
+                    <span class="dot two"></span>
+                    <span class="gender">Female</span>
+                  </label>
+                 
+                  </div>
+
+                </div>
+                
+                <div class="button">
+                    
+               
+                    <!-- Hover #2 -->
+                    <div class="box-2"> 
+                      <input type="submit" , value ="predict!">
+                      <div class="btn btn-two">
+                       
+                      </div>
+                    </div>
+                
+                    
+                </div>
+             
+              </form>
+            </div>
+          </div>
+        
+        </body>
+        </html>
+         
+    </body>
+</html>
